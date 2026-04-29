@@ -1,0 +1,19 @@
+adb devices
+
+
+buildozer android deploy run logcat | grep python
+
+
+E para ver se o e-mail está saindo (sem o lixo do sistema), abra um segundo terminal e deixe rodando:
+adb logcat -s python
+
+
+cd ~/Aqui_GPS/bin
+adb install -r SeuAppAqui.apk
+
+Uma dica para o seu "Grep"
+Como você está trabalhando com o Aqui_GPS, se você quiser ver no terminal o momento exato em que o GPS fixa a posição ou o e-mail é enviado, você pode "alargar" um pouco o filtro para não perder mensagens importantes do sistema sobre a rede.
+
+Você pode usar assim:
+
+buildozer android deploy run logcat | grep -iE "python|gps|location|mail"
