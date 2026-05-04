@@ -278,9 +278,9 @@ def agendar_previsao():
         # Verifica se o minuto e o segundo são zero (ou seja, virada de hora)
         if agora.minute == 0 and agora.second == 0:
             # Aqui você chama a sua função que busca o tempo e faz ela falar
-            #  Minha senha = "9666deb35e0d08ac9c7fb8fe757c51ef"
+            #  Minha senha = ""
             cidade = "Caruaru"
-            link = "https://api.openweathermap.org/data/2.5/weather?q=Caruaru,BR&appid=9666deb35e0d08ac9c7fb8fe757c51ef&lang=pt_br"
+            link = "https://api.openweathermap.org/data/2.5/weather?q=Caruaru,BR&appid=&lang=pt_br"
             try:
                requisicao = requests.get(link)
                dados = requisicao.json()
