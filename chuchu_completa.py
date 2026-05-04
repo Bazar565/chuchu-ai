@@ -138,9 +138,9 @@ def tarefa_ouvir():
                          # --- OPÇÃO 3: PREVISÃO DO TEMPO ---
                     elif "previsão do tempo" in texto or "como está o tempo" in texto:
                         # Aqui usamos a lógica do seu AlertaZap
-                        # api_key = "9666deb35e0d08ac9c7fb8fe757c51ef"
+                        # api_key = ""
                         cidade = "Caruaru"
-                        link = "https://api.openweathermap.org/data/2.5/weather?q=Caruaru,BR&appid=9666deb35e0d08ac9c7fb8fe757c51ef&lang=pt_br"
+                        link = "https://api.openweathermap.org/data/2.5/weather?q=Caruaru,BR&appid=&lang=pt_br"
                         requisicao = requests.get(link)
                         dados = requisicao.json()
                         temp = int(dados['main']['temp'] - 273.15)
